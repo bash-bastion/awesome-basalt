@@ -1,6 +1,8 @@
 # awesome-bash-packages
 
-[Basalt](https://github.com/hyperupcall/basalt) is a new package manager that is redefining the Bash ecosystem. See what kind of new packages exist
+An awesome list of Bash packages. All packages lists here are compatible with [Basalt](https://github.com/hyperupcall/basalt), a new Bash package manager that is redefining the Bash ecosystem
+
+Keep in mind that everything listed is currently _bleeding edge_; these packages should be expected to have a beta or alpha quality
 
 ## General use
 
