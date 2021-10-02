@@ -10,6 +10,7 @@ Keep in mind that everything listed is currently _bleeding edge_; these packages
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - The first Bash library for imperatively constructing data of nested and heterogeneous form
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - Bash TOML parser
 - [hyperupcall/bats-common-utils](https://github.com/hyperupcall/bats-common-utils) - Aggregation of Bats utility libraries
+- [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
 
 ## Personal use
 
