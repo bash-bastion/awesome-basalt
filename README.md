@@ -1,4 +1,4 @@
-# awesome-bash-packages
+# Awesome Bash Packages
 
 An awesome list of Bash packages. All packages lists here are compatible with [Basalt](https://github.com/hyperupcall/basalt), a new Bash package manager that is redefining the Bash ecosystem
 
@@ -6,11 +6,13 @@ Keep in mind that everything listed is currently _bleeding edge_; these packages
 
 ## General use
 
+- [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (NOT YET RELEASED)
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - The first Bash library for imperatively constructing data of nested and heterogeneous form
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - Bash TOML parser
 - [hyperupcall/bats-common-utils](https://github.com/hyperupcall/bats-common-utils) - Aggregation of Bats utility libraries
 - [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
+- [hyperupcall/template-bash](https://github.com/hyperupcall/template-bash) - A working template of how a Basalt Bash package should work
 
 ## Personal use
 
