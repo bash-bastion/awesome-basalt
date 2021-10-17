@@ -2,15 +2,15 @@
 
 All links packages for [Basalt](https://github.com/hyperupcall/basalt), a Bash package manager
 
-This list contains both applications written in Bash (or POSIX shell) that should be globally installable in addition to _Bash libraries_ that should be installed for a particular local Bash project. Basalt manages both of these cases
+This list contains projects written with a shell language that are either (1) Bash or POSIX Shell applications that are globally installable or (2) _Bash libraries_ that are locally (per-project) installable
 
-Keep in mind that everything listed should be considered at least _bleeding edge_. Many could be considered "stable" due to their respective expansive test suite, but I'll be conservative and label them as beta-quality. I'm dogfooding everything listed here
+Keep in mind that everything listed should be considered at least _bleeding edge_. Notwithstanding the label, many could be considered "stable" to comprehensive test suites and minimalist functionality. I'll also add that I'm dogfooding everything listed here, and most things _just work_ on _my machine_
 
 ## General use
 
 - [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (NOT YET RELEASED)
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing
-- [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash
+- [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - A kickass Toml parser written in pure Bash
 - [hyperupcall/bats-common-utils](https://github.com/hyperupcall/bats-common-utils) - Aggregation of Bats utility libraries
 - [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
