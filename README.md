@@ -8,16 +8,18 @@ Keep in mind that everything listed should be considered at least _bleeding edge
 
 ## General use
 
-- [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (NOT YET RELEASED)
+- [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (FEATURED)
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - A kickass Toml parser written in pure Bash
-- [hyperupcall/bats-common-utils](https://github.com/hyperupcall/bats-common-utils) - Aggregation of Bats utility libraries
+- [hyperupcall/bats-all](https://github.com/hyperupcall/bats-all) - Aggregation of Bats utility libraries
 - [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
 - [hyperupcall/template-bash](https://github.com/hyperupcall/template-bash) - A working template of how a Basalt Bash package should work
 - [hyperupcall/bash-error](https://github.com/hyperupcall/bash-error) - Ergonomic error handling in Bash
 - [hyperupcall/bash-algo](https://github.com/hyperupcall/bash-algo) - Common algorithms implemented in pure Bash
 - [hyperupcall/shtest](https://github.com/hyperupcall/shtest) - POSIX shell test runner
+- [hyperupcall/bake](https://github.com/hyperupcall/bake) - Simple Bash based Makefile alternative
+- [hyperupcall/bash-error](https://github.com/hyperupcall/bash-error) - Ergonomic error handling in Bash
 
 ## Personal use
 
