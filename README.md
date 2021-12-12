@@ -6,17 +6,21 @@ This list contains projects written with a shell language that are either (1) Ba
 
 Keep in mind that everything listed should be considered at least _bleeding edge_. Notwithstanding the label, many could be considered "stable" to comprehensive test suites and minimalist functionality. I'll also add that I'm dogfooding everything listed here, and most things _just work_ on _my machine_
 
+There is also a [best practices](./BEST_PRACTICES.md) file, which contains some reminders for how to write defensive Bash (which is a _must_ when writing Basalt packages)
+
 ## General use
 
 ### Applications
 
 - [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (FEATURED)
+- [hyperupcall/bash_config](https://github.com/hyperupcall/bash_config) - [`fish_config`](https://fishshell.com/docs/current/cmds/fish_config.html) for Bash (NOT RELEASED)
 - [hyperupcall/shtest](https://github.com/hyperupcall/shtest) - POSIX shell test runner
 - [hyperupcall/bake](https://github.com/hyperupcall/bake) - Simple Bash based Makefile alternative
 
 ### Libraries
 
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
+- [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (NOT RELEASED)
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - A kickass Toml parser written in pure Bash
 - [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
