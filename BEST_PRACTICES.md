@@ -1,5 +1,7 @@
 # Best Practices
 
+These are more specific to Basalt; for general reference the [Bash Hackers Wiki](https://wiki.bash-hackers.org/doku.php) and [Greg's Wiki](https://mywiki.wooledge.org)
+
 ## Functions
 
 Let's take this function as an example
@@ -32,7 +34,7 @@ There are several things to note
 
 - Unsetting the shopt option `localvar_inherit`and and setting `localvar_unset` obviates the aforementioned code, but there may be times in which this behavior is expected, and adding the single line makes the code more copy-and-pastable portable
 
-If there are multiple return values, there is a shortcut. Be careful, `declare -g` may have different semantics on context compared to a regular set
+If there are multiple return values, there is a shortcut. Be careful, `declare -g` may have different semantics on context compared to a regular syntaxic set. Note that it is slightly more technically correct to pass `-v` to `unset`, since without it may cause an unsetting of funcations like `REPLY1() { :; }`, etc. (TODO: add `-v`, linting rule autofix?)
 
 ```sh
 unset REPLY{1,2,3,4,5}
@@ -57,11 +59,11 @@ It's important to understand some subtle gotchias about handling errors in Bash
 set -e
 
 if curl "$@"; then :; else
-  printf '%s\n' "Error: Curl failed (code $?)"
+  printf '%s\n' "Error: Curl failed (code $?)" >&2
   exit $?
 fi
 ```
 
-- For larger scripts, it may be important to print extra information about an error, or pass it up the stack (e.g. using [bash-error](https://github.com/hyperupcall/bash-error)). Checking for an error like `if ! curl; then ...` is tempting, but the very act of using `!` will change the value of `$?`, so it is best to avoid it (assuming you want the correct value of `$?`). A good pattern is to use the no-op builtin in the `then` command list, and put the real error handling in the `else` command list
+- For larger scripts, it may be important to print extra information about an error, or pass it up the stack (eg. using [bash-error](https://github.com/hyperupcall/bash-error)). Checking for an error like `if ! curl; then ...` is tempting, but the very act of using `!` will change the value of `$?`, so it is best to avoid it (assuming you want the correct value of `$?`). A good pattern is to use the no-op builtin in the `then` command list, and put the real error handling in the `else` command list
 
-- For smaller scripts, I highly recommend `set -e`, but for larger ones, you should be checking return values anyways, so it should be less relevant - it becomes more of a tradeoff between exiting your program without notifying the user versus having potentially undefined behavior. The latter can be significantly mitigated if you constantly check for empty positional parameters, etc.
+- For smaller scripts, I highly recommend `set -e`, but for larger ones, you should be checking return values anyways, so it should be less relevant - it becomes more of a tradeoff between exiting your program without notifying the user versus having potentially "undefined" behavior. The latter can be significantly mitigated if you consistently check for empty positional parameters (like I do with [basalt](https://github.com/hyperupcall/basalt)), etc.
