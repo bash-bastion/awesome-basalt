@@ -19,6 +19,8 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 
 ### Libraries
 
+Note: `bash-error` is now merged in [hyperupcall/bash-core](https://github.com/hyperupcall/bash-core)
+
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
 - [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (NOT RELEASED)
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing

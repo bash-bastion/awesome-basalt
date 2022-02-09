@@ -16,18 +16,19 @@ TODO: write something thats actually readable
 .gitattributes
 .basalt.toml
 pkg/
+    bin/
+        NAME
     src/
         bin/
-            NAME
-        cmd/
             NAME.sh
         public/
         util/
     completions/
     man/
+        man1/
+            NAME.1
     share/
-          man/
-              NAME.1
+
 docs/
 tests/
 ```
