@@ -13,7 +13,7 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 ### Applications
 
 - [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (FEATURED)
-- [hyperupcall/bash_config](https://github.com/hyperupcall/bash_config) - [`fish_config`](https://fishshell.com/docs/current/cmds/fish_config.html) for Bash (NOT RELEASED)
+- [hyperupcall/bash_config](https://github.com/hyperupcall/bash_config) - [`fish_config`](https://fishshell.com/docs/current/cmds/fish_config.html) for Bash (not released)
 - [hyperupcall/shtest](https://github.com/hyperupcall/shtest) - POSIX shell test runner
 - [hyperupcall/bake](https://github.com/hyperupcall/bake) - Simple Bash-based Makefile alternative (FEATURED)
 
@@ -22,7 +22,7 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 Note: `bash-error` is now merged in [hyperupcall/bash-core](https://github.com/hyperupcall/bash-core)
 
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
-- [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (NOT RELEASED)
+- [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (not released)
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - A kickass Toml parser written in pure Bash
 - [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
@@ -30,7 +30,6 @@ Note: `bash-error` is now merged in [hyperupcall/bash-core](https://github.com/h
 - [hyperupcall/bash-core](https://github.com/hyperupcall/bash-core) - Core lightweight functions that any Bash programmer will love
 - [hyperupcall/bash-algo](https://github.com/hyperupcall/bash-algo) - Common algorithms implemented in pure Bash
 - [hyperupcall/bash-str](https://github.com/hyperupcall/bash-str) - String manipulation functions for Bash
-- [hyperupcall/template-bash](https://github.com/hyperupcall/template-bash) - A working template of how a Basalt Bash package should work
 
 ## Personal use
 
