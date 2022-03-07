@@ -12,10 +12,10 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 
 ### Applications
 
-- [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (FEATURED)
+- [hyperupcall/woof](https://github.com/hyperupcall/woof) - The version manager to end all version managers (FEATURED)
 - [hyperupcall/bash_config](https://github.com/hyperupcall/bash_config) - [`fish_config`](https://fishshell.com/docs/current/cmds/fish_config.html) for Bash (not released)
-- [hyperupcall/shtest](https://github.com/hyperupcall/shtest) - POSIX shell test runner
-- [hyperupcall/bake](https://github.com/hyperupcall/bake) - Simple Bash-based Makefile alternative (FEATURED)
+- [hyperupcall/shtest](https://github.com/hyperupcall/shtest) - A test runner for POSIX-compliant shells
+- [hyperupcall/bake](https://github.com/hyperupcall/bake) - A Bash-based Make alternative (FEATURED)
 - [hyperupcall/hookah](https://github.com/hyperupcall/hookah) - An elegantly minimal solution for Git hooks
 
 ### Libraries
