@@ -13,15 +13,15 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 ### Applications
 
 - [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once)
-- [hyperupcall/bash_config](https://github.com/hyperupcall/bash_config) - [`fish_config`](https://fishshell.com/docs/current/cmds/fish_config.html) for Bash (NOT RELEASED)
+- [hyperupcall/bash_config](https://github.com/hyperupcall/bash_config) - [`fish_config`](https://fishshell.com/docs/current/cmds/fish_config.html) for Bash (not released)
 - [hyperupcall/shelltest](https://github.com/hyperupcall/shelltest) - A test runner for POSIX-compliant shells
-- [hyperupcall/bake](https://github.com/hyperupcall/bake) - Simple Bash-based Makefile alternative (FEATURED)
+- [hyperupcall/bake](https://github.com/hyperupcall/bake) - A Bash-based Make alternative (FEATURED)
 - [hyperupcall/hookah](https://github.com/hyperupcall/hookah) - An elegantly minimal solution for Git hooks
 
 ### Libraries
 
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
-- [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (NOT RELEASED)
+- [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (not released)
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - A kickass Toml parser written in pure Bash
 - [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
