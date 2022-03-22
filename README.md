@@ -12,14 +12,13 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 
 ### Applications
 
-- [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once) (FEATURED)
+- [hyperupcall/woof](https://github.com/hyperupcall/woof) - A generalized version manager (replace pyenv,nvm,n,rvm,rbenv,crenv,phpenv, etc. all at once)
 - [hyperupcall/bash_config](https://github.com/hyperupcall/bash_config) - [`fish_config`](https://fishshell.com/docs/current/cmds/fish_config.html) for Bash (NOT RELEASED)
-- [hyperupcall/shtest](https://github.com/hyperupcall/shtest) - POSIX shell test runner
+- [hyperupcall/shelltest](https://github.com/hyperupcall/shelltest) - A test runner for POSIX-compliant shells
 - [hyperupcall/bake](https://github.com/hyperupcall/bake) - Simple Bash-based Makefile alternative (FEATURED)
+- [hyperupcall/hookah](https://github.com/hyperupcall/hookah) - An elegantly minimal solution for Git hooks
 
 ### Libraries
-
-Note: `bash-error` is now merged in [hyperupcall/bash-core](https://github.com/hyperupcall/bash-core)
 
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
 - [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (NOT RELEASED)
@@ -30,7 +29,7 @@ Note: `bash-error` is now merged in [hyperupcall/bash-core](https://github.com/h
 - [hyperupcall/bash-core](https://github.com/hyperupcall/bash-core) - Core lightweight functions that any Bash programmer will love
 - [hyperupcall/bash-algo](https://github.com/hyperupcall/bash-algo) - Common algorithms implemented in pure Bash
 - [hyperupcall/bash-str](https://github.com/hyperupcall/bash-str) - String manipulation functions for Bash
-- [hyperupcall/template-bash](https://github.com/hyperupcall/template-bash) - A working template of how a Basalt Bash package should work
+- [hyperupcall/bash-tty](https://github.com/hyperupcall/bash-tty) - Bash tput replacement
 
 ## Personal use
 
@@ -38,8 +37,6 @@ Because the Basalt ecosystem is so small, I decided to include some packages tha
 
 - [hyperupcall/glue](https://github.com/hyperupcall/glue) - Hypergeneral boilerplate manager and task runner
 - [hyperupcall/choose](https://github.com/hyperupcall/choose) - System for choosing default applications, programs, and utilities
-- [hyperupcall/dotshellgen](https://github.com/hyperupcall/dotshellgen) - Dotfile categorization and concatenation
-- [hyperupcall/dotshellextract](https://github.com/hyperupcall/dotshellextract) - Extract annotated parts of your shell dotfiles into a separate file
 
 ## Miscellaneous
 
