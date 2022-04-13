@@ -2,6 +2,37 @@
 
 These are more specific to Basalt; for general reference the [Bash Hackers Wiki](https://wiki.bash-hackers.org/doku.php) and [Greg's Wiki](https://mywiki.wooledge.org)
 
+## Names for functions / executables
+
+With shell scripting, functions and executable files have similarities. It is important to differentiate them. Do so with the following convention
+
+- functions: snake_case
+- executable / binaries: hyphen-case
+
+Functions are also allowed (and encouraged) to use `.` as a sort of pseudo-namespacing feature. For example:
+
+```sh
+bash_args.print.log_info() { :; }
+bash_args.print.log_warn() { :; }
+bash_args.print.log_error() { :; }
+```
+
+## Names for variables
+
+When capturing flags, name them like so
+
+```sh
+local flag_verbose=
+```
+
+When naming global variables, name them like so
+
+```sh
+local global_something=
+```
+
+When "returning" from a function, name your variable `REPLY` for one return value, or `REPLY1`, `REPLY2`, etc. for more than one. Naming your variable `REPLIES` is _strongly_ discouraged
+
 ## Functions
 
 Let's take this function as an example
@@ -54,11 +85,21 @@ Since the variable is function scoped and we only needed to use it in the for bl
 
 It's important to understand some subtle gotchias about handling errors in Bash
 
+Incorrect:
+
 ```sh
 #!/usr/bin/env bash
-set -e
 
-if curl "$@"; then :; else
+curl "$@"
+```
+
+Correct:
+
+```sh
+#!/usr/bin/env bash
+set -eo pipefail
+
+if curl -fsSL "$@"; then :; else
   printf '%s\n' "Error: Curl failed (code $?)" >&2
   exit $?
 fi
@@ -67,3 +108,40 @@ fi
 - For larger scripts, it may be important to print extra information about an error, or pass it up the stack (eg. using [bash-error](https://github.com/hyperupcall/bash-error)). Checking for an error like `if ! curl; then ...` is tempting, but the very act of using `!` will change the value of `$?`, so it is best to avoid it (assuming you want the correct value of `$?`). A good pattern is to use the no-op builtin in the `then` command list, and put the real error handling in the `else` command list
 
 - For smaller scripts, I highly recommend `set -e`, but for larger ones, you should be checking return values anyways, so it should be less relevant - it becomes more of a tradeoff between exiting your program without notifying the user versus having potentially "undefined" behavior. The latter can be significantly mitigated if you consistently check for empty positional parameters (like I do with [Basalt](https://github.com/hyperupcall/basalt)), etc.
+
+## Project Layout
+
+An attempt to describe the project layout of a Basalt package. It's important to keep this consistent across repositories
+
+TODO: write something thats actually readable
+
+### Goals
+
+1. Make it easier to run static code analysis on Bash projects
+2. Enable features within [Basalt](https://github.com/hyperupcall/basalt) that dependent on a more standard structure and environment variables
+3. Make it potentially easy to distribute on a system
+
+```txt
+.git/
+.gitignore
+.gitattributes
+.basalt.toml
+pkg/
+    bin/
+        NAME
+    src/
+        bin/
+            NAME.sh
+        public/
+        util/
+    completions/
+    man/
+        man1/
+            NAME.1
+    share/
+
+docs/
+tests/
+```
+
+For example, if the project is called `bash-http`, it will be installed to `/usr/lib/bash-http/{.basalt.toml,pkg,docs,etc.}` This way, `BASALT_PACKAGE_DIR` still works when doing things like `BASALT_PACKAGE_DIR/man`. Just like local mode, symlinks will be created for things in each place defined by `basalt.toml`

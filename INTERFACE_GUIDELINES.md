@@ -56,7 +56,3 @@ Of course, the `[ -z ...` and `print.fatal` can get quite repetitive, so it's re
 ```sh
 ensure.nonzero 'dir'
 ```
-
-TODO: Include library function in [bash-core](https://github.com/hyperupcall/bash-core)?
-
-The `FUNCNAME` and `BASH_LINENO` makes the callsite known at failure so pinpoints can be troubleshooted more easily by default (assuming you don't already have auto stacktrace printing configured)
