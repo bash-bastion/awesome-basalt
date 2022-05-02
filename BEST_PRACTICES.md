@@ -33,6 +33,12 @@ local global_something=
 
 When "returning" from a function, name your variable `REPLY` for one return value, or `REPLY1`, `REPLY2`, etc. for more than one. Naming your variable `REPLIES` is _strongly_ discouraged
 
+Things not to do. Do not use `REPLIES`, even if you are "returning" an array. It is too confusing (different names of different values). `REPLY` also semantically covers the array case
+
+```sh
+REPLIES=(one two there)
+```
+
 ## Functions
 
 Let's take this function as an example
