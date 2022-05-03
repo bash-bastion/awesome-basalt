@@ -17,6 +17,12 @@ bash_args.print.log_warn() { :; }
 bash_args.print.log_error() { :; }
 ```
 
+## REPLY semantics
+
+_Only_ set REPLY at the end of the function. NEVER do `REPLY+=$something`. Use an intermediate variable and assign it at end. `REPLY=$var` or `REPLY=("${var[@]}")`
+
+This is because calls to intermediate that expect a reply also do `REPLY=`. Since variable referencing is dynamic, this nukes the variable in an parent skopes (this is the point)
+
 ## Names for variables
 
 When capturing flags, name them like so
