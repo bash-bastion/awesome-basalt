@@ -51,3 +51,7 @@ Basalt works with existing "packages", as defined by both Basher and pkg. Browse
 
 - [Basher](https://www.basher.it/package)
 - [bpkg](https://bpkg.sh/packages/name)
+
+### Other ideas
+
+- bash-xargs
