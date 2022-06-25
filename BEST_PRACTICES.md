@@ -157,3 +157,31 @@ tests/
 ```
 
 For example, if the project is called `bash-http`, it will be installed to `/usr/lib/bash-http/{.basalt.toml,pkg,docs,etc.}` This way, `BASALT_PACKAGE_DIR` still works when doing things like `BASALT_PACKAGE_DIR/man`. Just like local mode, symlinks will be created for things in each place defined by `basalt.toml`
+
+### Options
+
+_Always_ ensure `-E` is set:
+
+```sh
+
+err_handler() {
+  local exit_code=$?
+  core.print_stacktrace
+  exit $exit_code
+}
+core.trap_add 'err_handler' ERR
+
+set -eE
+
+fn3() {
+	false
+}
+
+fn2() {
+	fn3
+}
+
+fn2
+```
+
+Other things like `shift_verbose` will be set like default too (see hyperupcall/basalt#96)
