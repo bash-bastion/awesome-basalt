@@ -22,21 +22,15 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 
 - [hyperupcall/bash-object](https://github.com/hyperupcall/bash-object) - Manipulate heterogenous data hierarchies in Bash (FEATURED)
 - [hyperupcall/bash-http](https://github.com/hyperupcall/bash-http) - Bash web servers for everyone! (not released)
+- [hyperupcall/bash-std](https://github.com/hyperupcall/bash-std) - A standard library for Bash
 - [hyperupcall/bash-args](https://github.com/hyperupcall/bash-args) - A cute little Bash library for blazing fast argument parsing
 - [hyperupcall/bash-toml](https://github.com/hyperupcall/bash-toml) - A kickass Toml parser written in pure Bash
-- [hyperupcall/bash-semver](https://github.com/hyperupcall/bash-semver) - Semantic version library for Bash
+- [hyperupcall/bash-json](https://github.com/hyperupcall/bash-json) - JSON Parser in pure Bash
 - [hyperupcall/bats-all](https://github.com/hyperupcall/bats-all) - Aggregation of Bats utility libraries
 - [hyperupcall/bash-core](https://github.com/hyperupcall/bash-core) - Core lightweight functions that any Bash programmer will love
 - [hyperupcall/bash-algo](https://github.com/hyperupcall/bash-algo) - Common algorithms implemented in pure Bash
 - [hyperupcall/bash-str](https://github.com/hyperupcall/bash-str) - String manipulation functions for Bash
 - [hyperupcall/bash-term](https://github.com/hyperupcall/bash-term) - Bash library for terminal escape sequences
-
-## Personal use
-
-Because the Basalt ecosystem is so small, I decided to include some packages that I use personally. Of course, they should work on any Linux machine, but documentation and testing is not as extensive as the other repositories listed
-
-- [hyperupcall/glue](https://github.com/hyperupcall/glue) - Hypergeneral boilerplate manager and task runner
-- [hyperupcall/choose](https://github.com/hyperupcall/choose) - System for choosing default applications, programs, and utilities
 
 ## Miscellaneous
 
