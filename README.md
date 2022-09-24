@@ -31,7 +31,7 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 - [hyperupcall/bash-algo](https://github.com/hyperupcall/bash-algo) - Common algorithms implemented in pure Bash
 - [hyperupcall/bash-str](https://github.com/hyperupcall/bash-str) - String manipulation functions for Bash
 - [hyperupcall/bash-term](https://github.com/hyperupcall/bash-term) - Bash library for terminal escape sequences
-- [hyperupcall/bash-term](https://github.com/hyperupcall/bash-tui) - Bash library for making TUI's (NOT RELEASED)
+- [hyperupcall/bash-tui](https://github.com/hyperupcall/bash-tui) - Bash library for making TUI's (NOT RELEASED)
 
 ## Miscellaneous
 
