@@ -4,7 +4,7 @@ These Best Practices are more specific to Basalt; for general reference, see the
 
 Things not mentioned here are already handled by [Basalt](https://github.com/hyperupcall/basalt) (ex. `set -ET`).
 
-## Names for Executables and Functions
+## Names for executables and functions
 
 Executables should match the regex `[a-zA-Z-]`.
 
@@ -45,6 +45,25 @@ When naming indirect variables, postfix with `_` (`__` for libraries):
 ```sh
 local -n _final_value=
 ```
+
+## Private functions
+
+When developing Bash libraries, it may be helpful to denote functions as private for internal use anyways. Do so by prefixing an underscore:
+
+```sh
+bash_core._trim_whitespace() {
+	:
+}
+```
+
+## Utility and helper functions
+
+If there are many utility or helper functions, it may be helpful to name the functions after the file it's contained in. For example, a file called `util-db.sh` may contain the following functions:
+
+- `util_db_read()`
+- `util_db_write()`
+
+And so on...
 
 ## Exiting
 
@@ -124,7 +143,7 @@ There are several things to note:
 
 - _Only_ set REPLY at the beginning or end of the function
 
-### Other Benefits
+### Other benefits
 
 This pattern makes it simple and straightforward to return multiple variables from an array. It also makes it possible to return index arrays and associative arrays.
 
@@ -183,7 +202,7 @@ str.repeat 'fox' 3
 
 - **`unset -v i`**: Prevent Bash's default dynamic scoping from making this variable accessible in later contexts.
 
-## Error Handling
+## Error handling
 
 ## Stacktrace
 
@@ -221,7 +240,7 @@ Stacktrace:
   in fn (/home/edwin/groups/Bash/woof/.hidden/blah.sh:17)
 ```
 
-### Exit Codes
+### Exit codes
 
 If you wish to print a nice error message on failures, it is not straight-forward. Use the following guidelines. I assume that you have `errexit` enabled and have setup stacktrace printing (as I mentioned above).
 
@@ -272,7 +291,7 @@ work() {
 
 ```
 
-## Project Layout
+## Project layout
 
 The layout of Basalt projects should be consistent. My personal layout was informed with the following goals:
 
