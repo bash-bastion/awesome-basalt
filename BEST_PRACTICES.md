@@ -6,11 +6,11 @@ Things not mentioned here are already handled by [Basalt](https://github.com/hyp
 
 ## Names for executables and functions
 
-Executables should match the regex `[a-zA-Z-]`.
+Executables should match the regex `[[:alpha:]][[:alnum:]-]*`.
 
-Functions should match the regex `[a-zA-Z_:.]`.
+Functions should match the regex `[[:alpha:]][[:alnum:]_:.]*`.
 
-Use `::` or `.` (preferred) to namespace your functions. For example:
+Use `::` or `.` to namespace your functions. `.` is _highly_ preferred. For example:
 
 ```sh
 bash_core.log_info() { :; }
@@ -28,22 +28,23 @@ When naming variables after command-line flags, prefix with `flag_`:
 local flag_verbose=
 ```
 
-When naming global variables, prefix with `global_`:
+When naming global variables, prefix with `g_`:
 
 ```sh
-declare -g global_something=
+declare -g g_something=
 ```
 
-When naming dynamic variables, prefix with `dynamic_`:
+When naming dynamic variables, prefix with `d_`:
 
 ```sh
-local dynamic_something=
+local d_something=
 ```
 
-When naming indirect variables, postfix with `_` (`__` for libraries):
+When naming indirect variables, pre with `_` (`__` for libraries) or postfix with `_name`:
 
 ```sh
 local -n _final_value=
+local -n key_name=
 ```
 
 ## Private functions
@@ -60,8 +61,8 @@ bash_core._trim_whitespace() {
 
 If there are many utility or helper functions, it may be helpful to name the functions after the file it's contained in. For example, a file called `util-db.sh` may contain the following functions:
 
-- `util_db_read()`
-- `util_db_write()`
+- `util.db_read()`
+- `util.db_write()`
 
 And so on...
 
@@ -73,7 +74,7 @@ When exiting, _always_ supply a number:
 if [ -n "$foo" ]; then
 	:
 else
-	exit
+	exit 0
 fi
 ```
 
@@ -102,24 +103,24 @@ Linters like ShellCheck won't print warnings on these if your shell is set to Ba
 
 ## REPLY-Pattern
 
-Bash only allows returning from a function with a numerical exit code. To work around this, use this pattern, inspired by the `read` and `select` builtins.
+Bash only allows "returning" from a function with a numerical exit code. To work around this, use this pattern, inspired by the `read` and `select` builtins.
 
 ### Example
 
 Simply assign the value you wish to return to `REPLY`, then return from the function:
 
 ```sh
-basename() {
+my_basename() {
 	unset -v REPLY; REPLY=
-	local filepath="$1"
+	local filepath=$1
 
-	local result="{filepath%/}"
+	local result={filepath%/}
 	result=${result##*/}
 
 	REPLY=$result
 }
 
-basename "$0"
+my_basename "$0"
 printf '%s\n' "The basename of '$0' is '$REPLY'"
 ```
 
@@ -141,7 +142,7 @@ There are several things to note:
 
 - If you need a different name (due to Bash dynamic scope, etc.) then naming it `REPLY_OUTER` or `REPLY_INNER_*`, or `REPLY_{name}` is O.K.
 
-- _Only_ set REPLY at the beginning or end of the function
+- Try to only set REPLY at the beginning or end of the function
 
 ### Other benefits
 
@@ -176,6 +177,8 @@ Benchmark 1: ./script.sh faster_basename
 
 </details>
 
+Considering real performance, I have heard that x10 performance improvement is not uncommon.
+
 ## Loops
 
 You may wish to harden your loop code. Take the following example:
@@ -201,6 +204,8 @@ str.repeat 'fox' 3
 - **`local i=`**: Ensure the variable is function scoped instead of globally scoped.
 
 - **`unset -v i`**: Prevent Bash's default dynamic scoping from making this variable accessible in later contexts.
+
+Admittedly, this hardening is a bit extraneous, so I do not strongly recommend it.
 
 ## Error handling
 
@@ -291,7 +296,7 @@ work() {
 
 ```
 
-## Project layout
+## Project Layout
 
 The layout of Basalt projects should be consistent. My personal layout was informed with the following goals:
 
