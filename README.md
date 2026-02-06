@@ -38,6 +38,7 @@ There is also a [best practices](./BEST_PRACTICES.md) file, which contains some 
 ### Similar Lists
 
 - [awesome-bash](https://github.com/awesome-lists/awesome-bash)
+- [awesome-bash (bash-bastion)](https://github.com/bash-bastion/awesome-bash).
 - [awesome-shell](https://github.com/alebcay/awesome-shell)
 
 ### Similar Package Managers
